@@ -45,7 +45,6 @@ body {
 }
 
 .header__logo {
-    display: block;
     height: 105px;
     grid-area: logo;
     display: flex;
