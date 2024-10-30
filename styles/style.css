@@ -5,7 +5,6 @@ body {
 
 .header {
     max-width: 1052px;
-    height: 105px;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -31,8 +30,8 @@ body {
 }
 
 .header__link {
-    text-decoration: none;
-    border-bottom: 1px solid #000;
+    text-decoration: underline 1px solid #000;
+    text-underline-offset: 4px;
 }
 
 .header__links-list-item_no-bullit {
@@ -61,16 +60,27 @@ body {
     align-items: flex-start;
     justify-content: center;
     font-style: normal;
-    line-height: 0.65;
+    line-height: 12px;
     grid-area: address;
     margin-left: 192px;
+    text-decoration: none;
+}
+
+.address__street {
+    line-height: 15px;
+}
+
+.address__street br {
+    content: ""; /* пустой контент для псевдоэлемента */
+    display: block;
+    margin-bottom: 8px; /* отступ в 8 пикселей */
 }
 
 .cover {
     position: relative;
     width: 100%;
     max-width: 1100px;
-    height: 757px;
+    padding-bottom: 48px;
     background-image: url(../images/cover.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -94,7 +104,6 @@ body {
     margin-left: 50px;
     transform: translateY(165px);
     width: 1000px;
-    height: 355px;
 }
 
 .aligned-text {
@@ -169,25 +178,26 @@ body {
 
 .lots__card-list {
     display: flex;
-    flex-grow: 1;
-    gap: 25px;
+    flex-wrap: wrap;
     padding-top: 27px;
     justify-content: center;
+    gap: 25px;
 }
 
 .lots__card-list-item {
+    width: 100%;
+    max-width: 334px;
+    min-height: 563px;
     list-style: none;
+    flex-grow: 1;
 }
 
 .card {
-    width: 100%;
-    max-width: 334px;
-    height: 563px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: 1;
-    flex-wrap: wrap;
     text-decoration: none;
 }
 
@@ -328,8 +338,19 @@ body {
     align-items: flex-start;
     justify-content: center;
     font-style: normal;
-    line-height: 0.65;
+    line-height: 12px;
     margin-top: 5px;
+}
+
+.footer__address-link {
+    text-decoration: underline 1px solid #000;
+    text-underline-offset: 4px;
+}
+
+.footer__address-street br {
+    content: ""; /* пустой контент для псевдоэлемента */
+    display: block;
+    margin-bottom: 12px; /* отступ в 12 пикселей */
 }
 
 .footer__menu {
