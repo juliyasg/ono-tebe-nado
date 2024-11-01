@@ -29,18 +29,17 @@ body {
     list-style: circle;
 }
 
-.header__link {
+.link {
     text-decoration: underline 1px solid #000;
     text-underline-offset: 4px;
 }
 
-.header__links-list-item_no-bullit {
-    list-style: none;
+.link__active {
     text-decoration: none;
 }
 
-.header__link_active {
-    border-bottom: none;
+.header__links-list-item_no-bullit {
+    list-style: none;
 }
 
 .header__logo {
@@ -54,13 +53,16 @@ body {
     height: 100%;
 }
 
-.header__address {
+.address {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     font-style: normal;
     line-height: 12px;
+}
+
+.header__address {
     grid-area: address;
     margin-left: 192px;
     text-decoration: none;
@@ -260,10 +262,10 @@ body {
 .about {
     width: 100%;
     max-width: 1052px;
-    height: 598px;
     margin-top: 146px;
     margin-left: 24px;
 }
+
 .about__column {
     display: grid;
     grid-template-columns: 334px auto;
@@ -275,7 +277,6 @@ body {
 .about__column-logo {   /*этот класс для создания колонки с размерами 334х563, как было указано в уроке Проектная работа */
     width: 100%;
     max-width: 334px;
-    height: 563px;
     grid-area: about_logo;
     display: flex;
     justify-content: center;
@@ -295,7 +296,6 @@ body {
 
 .about__logo-image {
     width: 100%;
-    height: 114px;
     max-width: 148px;
 }
 
@@ -323,9 +323,8 @@ body {
     margin-bottom: 23px;
 }
 
-
 .footer {
-    padding: 180px 50px 88px 50px;
+    padding: 212px 50px 88px 50px;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     font-size: 18px;
@@ -333,18 +332,8 @@ body {
 }
 
 .footer__address {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    font-style: normal;
     line-height: 12px;
     margin-top: 5px;
-}
-
-.footer__address-link {
-    text-decoration: underline 1px solid #000;
-    text-underline-offset: 4px;
 }
 
 .footer__address-street br {
@@ -368,15 +357,6 @@ body {
 
 .footer__menu-list-item {
     text-align: center;
-}
-
-.footer__menu-link {
-    text-decoration: none;
-    border-bottom: 1px solid #000;
-}
-
-.footer__menu-link_active {
-    border-bottom: none;
 }
 
 .footer__social-list {
